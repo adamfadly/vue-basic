@@ -9,18 +9,17 @@
 
 <script>
 export default {
-    name: 'AllFriends',
-    props: ['friends'],
-    data() {
-        return{
-
-        }
-    },
-    methods: {
-        unfriend(name){
-            this.$emit('delete', { name })
-        }
-    }
+  name: 'AllFriends',
+  props: ['friends'],
+  data() {
+      return{
+      }
+  },
+  methods: {
+   unfriend(name) {
+     this.$emit('delete', { name })
+   }
+  }
 }
 </script>
 

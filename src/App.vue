@@ -2,8 +2,9 @@
   <div id="app">
     <h1>{{ title }}</h1>
     <Navbar />
-    <AllFriends :friends="friends" @delete="deleteFriend" />
+    <AllFriends :friends="friends" @delete="deleteFriend"/>
     <OnlineFriends :friends="friends" />
+    <Address :alamats="alamats" />
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import Navbar from './Navbar'
 import AllFriends from './AllFriends'
 import OnlineFriends from './OnlineFriends'
+import Address from './Address'
 
 
 
@@ -19,7 +21,8 @@ export default {
   components: {
     Navbar,
     AllFriends,
-    OnlineFriends
+    OnlineFriends,
+    Address
   },
 
   data () {
@@ -31,12 +34,18 @@ export default {
         { name: 'Tood', online: true },
         { name: 'Bowser', online: false }
       ],
+      alamats: [
+        {name: 'budi', alamat: 'jl. saleh'},
+        {name: 'joko', alamat: 'jl. nabi'},
+        {name: 'may', alamat: 'jl. binus'},
+        {name: 'dewo', alamat: 'jl. kemang'}
+      ]
     }
   },
   methods: {
     deleteFriend(payload) {
       console.log(payload)
-      this.friends = this.friends.filter( friend =>{
+      this.friends = this.friends.filter( friend => {
         return friend.name !== payload.name
       })
     }
