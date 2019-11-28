@@ -12,6 +12,7 @@ import Navbar from './Navbar'
 import Blogs from './Blogs'
 
 
+
 export default {
   name: 'app',
   components: {
