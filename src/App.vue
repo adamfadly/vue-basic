@@ -6,6 +6,7 @@
   </div>
 </template>
 
+
 <script>
 import Navbar from './Navbar'
 import Blogs from './Blogs'
